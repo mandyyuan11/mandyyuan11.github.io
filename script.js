@@ -1,3 +1,6 @@
+// =====================
+// Terminal Interaction
+// =====================
 const input = document.querySelector('#terminal input');
 const output = document.querySelector('#terminal .output');
 
@@ -10,11 +13,13 @@ input.addEventListener('keydown', (e) => {
   }
 });
 
-// ---- Noticing Page ----
+// =====================
+// Noticing Page Carousel
+// =====================
 const images = [
   {
     src: "sunlight.jpg",
-    caption: "Light flitting through blinds, a classic token of nostalgia"
+    caption: "Light flitting through blinds, a classic rememberence of nostalgia"
   },
   {
     src: "bluewindows.jpg",
@@ -25,8 +30,11 @@ const images = [
 let currentIndex = 0;
 const imgEl = document.getElementById('notice-img');
 const captionEl = document.getElementById('notice-caption');
+const nextBtn = document.getElementById('next-btn');
+const prevBtn = document.getElementById('prev-btn');
 
 function updatePhoto() {
+  if (!imgEl || !captionEl) return;
   imgEl.style.opacity = 0;
   captionEl.style.opacity = 0;
 
@@ -35,17 +43,27 @@ function updatePhoto() {
     captionEl.textContent = images[currentIndex].caption;
     imgEl.style.opacity = 1;
     captionEl.style.opacity = 1;
-  }, 300);
+  }, 200);
 }
 
-if (imgEl && captionEl) { // only run if on the Noticing page
-  document.getElementById('next-btn').addEventListener('click', () => {
+if (imgEl && captionEl && nextBtn && prevBtn) {
+  updatePhoto();
+  nextBtn.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % images.length;
     updatePhoto();
   });
 
-  document.getElementById('prev-btn').addEventListener('click', () => {
+  prevBtn.addEventListener('click', () => {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     updatePhoto();
   });
+}
+
+// =====================
+// Header Offset Fix
+// =====================
+const header = document.querySelector('header');
+const main = document.querySelector('main');
+if (header && main) {
+  main.style.marginTop = `${header.offsetHeight}px`;
 }
