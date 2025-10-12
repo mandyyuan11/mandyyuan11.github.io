@@ -167,24 +167,21 @@ h2::after {
   transform: translateY(-2px);
 }
 /* ========== TERMINAL SECTION ========== */
-#terminal-section {
-  background: #1e1e1e;
-  color: #00ff9d;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding-top: 180px;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  font-family: 'Courier New', Courier, monospace;
+.terminal-window {
+  background: black;
+  color: white;
+  padding: 1rem;
+  font-family: monospace;
+  border-radius: 0.5rem;
+  max-width: 600px;
+  margin: auto;
 }
-
-#terminal-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #00ff9d;
+.terminal-window input {
+  background: none;
+  border: none;
+  color: white;
+  width: 100%;
+  outline: none;
 }
 
 .terminal-box {
@@ -216,4 +213,5 @@ h2::after {
   50% {
     background: transparent;
   }
+  
 }

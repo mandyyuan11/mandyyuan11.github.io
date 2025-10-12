@@ -28,20 +28,26 @@
     </section>
 
     <!-- ✨ Terminal Section -->
-    <section id="terminal-section">
-      <h2>Questions to the World</h2>
-      <div class="terminal-box">
-        <div class="terminal-text" id="terminal-output">
-          Why can’t everything just be beautiful?<br>
-          Why grey in a world obsessed with color and binaries?<br>
-          Why do we take simple things for granted?
-          <span class="cursor"></span>
-        </div>
-      </div>
-    </section>
+  <section id="terminal">
+    <div class="terminal-window">
+      <div class="output"></div>
+      <input type="text" placeholder="Type your question...">
+    </div>
+  </section>
 
-  </main>
+  <script>
+    const input = document.querySelector('#terminal input');
+    const output = document.querySelector('#terminal .output');
 
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && input.value.trim() !== '') {
+        const line = document.createElement('p');
+        line.textContent = `> ${input.value}`;
+        output.appendChild(line);
+        input.value = '';
+      }
+    });
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
