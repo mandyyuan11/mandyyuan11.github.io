@@ -1,0 +1,67 @@
+/* GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background: linear-gradient(to bottom right, #f0f0f0, #ffffff);
+  color: #333;
+  padding: 2rem;
+}
+
+/* HEADER */
+header {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/* INTRO SECTION */
+.intro {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+}
+
+/* TERMINAL SECTION */
+.terminal-window {
+  background: black;
+  color: white;
+  padding: 1rem;
+  font-family: monospace;
+  border-radius: 0.5rem;
+  max-width: 800px;
+  margin: auto;
+  min-height: 150px;
+}
+
+.terminal-window input {
+  background: none;
+  border: none;
+  color: white;
+  width: 100%;
+  outline: none;
+  margin-top: 0.5rem;
+}
+
+.terminal-window .output p {
+  margin: 0.25rem 0;
+}
