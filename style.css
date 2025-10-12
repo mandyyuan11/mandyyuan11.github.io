@@ -166,3 +166,54 @@ h2::after {
   background: #e4e4e4;
   transform: translateY(-2px);
 }
+/* ========== TERMINAL SECTION ========== */
+#terminal-section {
+  background: #1e1e1e;
+  color: #00ff9d;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 180px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#terminal-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #00ff9d;
+}
+
+.terminal-box {
+  background: #000000;
+  border: 2px solid #00ff9d;
+  padding: 1.5rem;
+  width: 80%;
+  max-width: 700px;
+  border-radius: 8px;
+  min-height: 200px;
+  box-shadow: 0 0 15px rgba(0, 255, 157, 0.3);
+}
+
+.terminal-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  background: #00ff9d;
+  animation: blink 1s steps(1) infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  50% {
+    background: transparent;
+  }
+}
