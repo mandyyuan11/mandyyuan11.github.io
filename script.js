@@ -1,28 +1,26 @@
-// =====================
-// Terminal Interaction
-// =====================
+// ---------- Terminal (on index.html) ----------
 const input = document.querySelector('#terminal input');
 const output = document.querySelector('#terminal .output');
 
-input.addEventListener('keydown', (e) => {
-  if (e.key === 'Enter' && input.value.trim() !== '') {
-    const line = document.createElement('p');
-    line.textContent = `> ${input.value}`;
-    output.appendChild(line);
-    input.value = '';
-  }
-});
+if (input && output) {
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && input.value.trim() !== '') {
+      const line = document.createElement('p');
+      line.textContent = `> ${input.value}`;
+      output.appendChild(line);
+      input.value = '';
+    }
+  });
+}
 
-// =====================
-// Noticing Page Carousel
-// =====================
+// ---------- Image Navigation (on noticing.html) ----------
 const images = [
   {
-    src: "sunlight.jpg",
-    caption: "Light flitting through blinds, a classic rememberence of nostalgia"
+    src: "images/sunlight.jpg",
+    caption: "Light flitting through blinds, a classic reminder of nostalgia"
   },
   {
-    src: "bluewindows.jpg",
+    src: "images/bluewindow.jpg",
     caption: "Glass windows with a blue hue."
   }
 ];
@@ -30,11 +28,10 @@ const images = [
 let currentIndex = 0;
 const imgEl = document.getElementById('notice-img');
 const captionEl = document.getElementById('notice-caption');
-const nextBtn = document.getElementById('next-btn');
 const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
 
 function updatePhoto() {
-  if (!imgEl || !captionEl) return;
   imgEl.style.opacity = 0;
   captionEl.style.opacity = 0;
 
@@ -43,27 +40,17 @@ function updatePhoto() {
     captionEl.textContent = images[currentIndex].caption;
     imgEl.style.opacity = 1;
     captionEl.style.opacity = 1;
-  }, 200);
+  }, 300);
 }
 
-if (imgEl && captionEl && nextBtn && prevBtn) {
-  updatePhoto();
-  nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % images.length;
-    updatePhoto();
-  });
-
+if (imgEl && captionEl && prevBtn && nextBtn) {
   prevBtn.addEventListener('click', () => {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     updatePhoto();
   });
-}
 
-// =====================
-// Header Offset Fix
-// =====================
-const header = document.querySelector('header');
-const main = document.querySelector('main');
-if (header && main) {
-  main.style.marginTop = `${header.offsetHeight}px`;
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    updatePhoto();
+  });
 }
