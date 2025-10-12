@@ -176,7 +176,7 @@ h2::after {
   max-width: 700px;
   width: 80%;
   margin: 2rem auto;
-  box-shadow: 0 0 15px rgba(0, 255, 157, 0.3);
+  box-shadow: 0 0 15px rgba(103, 103, 103, 0.3);
   min-height: 200px;
 }
 
