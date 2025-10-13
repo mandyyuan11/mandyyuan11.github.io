@@ -115,6 +115,7 @@ h2::after {
   max-width: 750px;
   margin: 2rem auto;
   box-shadow: 0 0 15px rgba(0,0,0,0.6);
+  text-align: left;
 }
 
 #terminal-output {
@@ -126,7 +127,7 @@ h2::after {
 
 .prompt-line {
   display: flex;
-  align-items: center;
+  align-items: left;
   gap: 0.5rem;
   flex-wrap: wrap;
 }
@@ -146,11 +147,13 @@ h2::after {
   font-size: 1rem;
   outline: none;
   caret-color: #bbbbbb;
+  text-align: left;
 }
 
 #terminal-input::placeholder {
   color: #666;
   font-style: italic;
+  text-align: left;
 }
 
 /* typing caret for replies */
