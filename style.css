@@ -128,14 +128,6 @@ h2::after {
   flex-wrap: wrap;
 }
 
-.prompt-prefix {
-  color: #33ff33; /* green */
-}
-
-.prompt-path {
-  color: #5fafff; /* blue-ish */
-}
-
 .prompt-symbol {
   color: #fff;
 }
@@ -148,7 +140,6 @@ h2::after {
   font-family: inherit;
   font-size: 1rem;
   outline: none;
-  caret-color: #33ff33;
 }
 
 #terminal-input::placeholder {
@@ -161,7 +152,6 @@ h2::after {
   display: inline-block;
   width: 8px;
   height: 1em;
-  background: #33ff33;
   animation: blink 0.8s steps(1) infinite;
   vertical-align: bottom;
 }
@@ -170,27 +160,5 @@ h2::after {
   50% { opacity: 0; }
 }
 
-.line.user { color: #33ff33; }
+.line.user { color: #dfdfdf; }
 .line.reply { color: #aaa; font-style: italic; }
-
-.terminal-controls {
-  display: flex;
-  justify-content: flex-end;
-  gap: 0.5rem;
-  margin-top: 1rem;
-}
-
-.terminal-controls button {
-  background: #1a1a1a;
-  color: #fff;
-  border: 1px solid #333;
-  padding: 0.4rem 0.8rem;
-  cursor: pointer;
-  border-radius: 4px;
-  font-family: inherit;
-  transition: background 0.2s;
-}
-
-.terminal-controls button:hover {
-  background: #333;
-}
