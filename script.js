@@ -1,4 +1,3 @@
-/* ========== Terminal: Letters to the Void ========== */
 (function() {
   const input = document.getElementById('terminal-input');
   const output = document.getElementById('terminal-output');
@@ -156,28 +155,6 @@
   });
 
 })();
-const input = document.getElementById("terminal-input");
-const output = document.getElementById("terminal-output");
-
-input.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") {
-    const question = input.value.trim();
-    if (question) {
-      // Add prompt line
-      output.innerHTML += `<div><span class="prompt-symbol">$</span> ${question}</div>`;
-      
-      // Add fake "response" below it
-      output.innerHTML += `<div>→ Echo: "${question}" received by the void.</div>`;
-      
-      input.value = "";
-      output.scrollTop = output.scrollHeight; // keep scroll pinned to bottom
-    }
-  }
-});
-
-
-
-
 
 
 

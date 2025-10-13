@@ -31,20 +31,24 @@
  <!-- ✨ Terminal Section (Letters to the Void) -->
 <section id="terminal">
   <h2>Questions to the World</h2>
-   <div class="prompt-line">
-      <span class="prompt-symbol">$</span>
-      <input
-        id="terminal-input"
-        type="text"
-        placeholder="Type your question or /help for commands..."
-        autocomplete="off"
-      />
-      <div class="terminal-window" role="region" aria-label="Letters to the void">
-      <div class="output" id="terminal-output" aria-live="polite"></div>
-    </div>
 
+  <!-- Prompt at the top -->
+  <div class="prompt-line">
+    <span class="prompt-symbol">$</span>
+    <input
+      id="terminal-input"
+      type="text"
+      placeholder="Type your question or /help for commands..."
+      autocomplete="off"
+    />
+  </div>
+
+  <!-- Terminal output below -->
+  <div class="terminal-window" role="region" aria-label="Letters to the void">
+    <div class="output" id="terminal-output" aria-live="polite"></div>
   </div>
 </section>
+
 
 
 </main>
