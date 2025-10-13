@@ -97,8 +97,9 @@ h2::after {
   margin-bottom: 0.75rem;
   font-size: 1.25rem;
 }
-
+/* =================================== */
 /* ========== NOTICING PAGE ========== */
+/* =================================== */
 #noticing {
   text-align: center;
   padding: 4rem 1.5rem;
@@ -143,6 +144,28 @@ h2::after {
   margin-top: 1rem;
   transition: opacity 0.4s ease;
 }
+/* ========== PHOTO FRAME ========== */
+.photo-frame {
+  max-width: 750px; /* bigger than the original 650px */
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.3); /* added slight transparency */
+  backdrop-filter: blur(5px); /* makes transparency look nice */
+  padding: 0.5rem; /* gives the image a little breathing room */
+}
+
+.photo-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.photo-frame img:hover {
+  transform: scale(1.02);
+}
 
 /* ========== BUTTONS ========== */
 .nav-buttons {
@@ -165,6 +188,7 @@ h2::after {
 .nav-buttons button:hover {
   background: #e4e4e4;
   transform: translateY(-2px);
+  
 }
 /* ========== TERMINAL SECTION ========== */
 .terminal-window {
