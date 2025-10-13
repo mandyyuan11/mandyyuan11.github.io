@@ -28,29 +28,27 @@
       <p>Light flitting through blinds, settling water, ordinary glass panels.</p>
     </section>
 
- <!-- ✨ Terminal Section (Letters to the Void) -->
+<!-- ✨ Terminal Section (Letters to the Void) -->
 <section id="terminal">
   <h2>Questions to the World</h2>
 
-  <!-- Prompt at the top -->
-  <div class="prompt-line">
-    <span class="prompt-symbol">$</span>
-    <input
-      id="terminal-input"
-      type="text"
-      placeholder="Type your question or /help for commands..."
-      autocomplete="off"
-    />
-  </div>
-
-  <!-- Terminal output below -->
+  <!-- Terminal window wraps prompt and output -->
   <div class="terminal-window" role="region" aria-label="Letters to the void">
+    <!-- Prompt at the top -->
+    <div class="prompt-line">
+      <span class="prompt-symbol">$</span>
+      <input
+        id="terminal-input"
+        type="text"
+        placeholder="Type your question or /help for commands..."
+        autocomplete="off"
+      />
+    </div>
+
+    <!-- Terminal output below -->
     <div class="output" id="terminal-output" aria-live="polite"></div>
   </div>
 </section>
-
-
-
 </main>
 </body>
 </html>
