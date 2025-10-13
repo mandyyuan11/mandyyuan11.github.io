@@ -27,7 +27,7 @@
 
   function appendLine(text, type = 'user') {
     const p = document.createElement('div');
-    p.className = `line ${type}`;
+    p.className = `line {type}`;
     p.textContent = text;
     output.appendChild(p);
     scrollToBottom();

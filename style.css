@@ -97,228 +97,100 @@ h2::after {
   margin-bottom: 0.75rem;
   font-size: 1.25rem;
 }
+
+
+
+
 /* Terminal / Letters to the Void */
-#terminal {
-  padding: 4rem 1.5rem;
-  text-align: center;
-}
-
-#terminal h2 {
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 1rem;
-  color: #111;
-}
-
+/* Terminal styling */
 .terminal-window {
-  background: rgba(0, 0, 0, 0.75);
-  color: #dfffe6;
-  padding: 1.5rem;
-  font-family: 'Courier New', Courier, monospace;
-  border-radius: 10px;
-  max-width: 900px;
-  width: 92%;
-  margin: 1rem auto 2rem;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.45);
-  min-height: 260px;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-/* Output area */
-.terminal-window .output {
-  flex: 1 1 auto;
-  overflow-y: auto;
-  padding: 0.5rem;
-  border-radius: 6px;
-  background: rgba(255,255,255,0.02);
-}
-
-/* each user line */
-.terminal-window .output .line {
-  margin: 0.25rem 0;
-  line-height: 1.4;
-}
-
-/* user text style */
-.terminal-window .output .line.user {
+  background: #000;
   color: #fff;
+  font-family: 'SF Mono', Consolas, monospace;
+  padding: 1.5rem;
+  border-radius: 10px;
+  max-width: 750px;
+  margin: 2rem auto;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
 }
 
-/* reply style */
-.terminal-window .output .line.reply {
-  color: #b6f5d1;
-  opacity: 0.95;
-  font-style: italic;
+#terminal-output {
+  min-height: 180px;
+  white-space: pre-wrap;
+  line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
-/* prompt */
 .prompt-line {
   display: flex;
-  gap: 0.5rem;
   align-items: center;
-  margin-top: 0.25rem;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.prompt-prefix {
+  color: #33ff33; /* green */
+}
+
+.prompt-path {
+  color: #5fafff; /* blue-ish */
 }
 
 .prompt-symbol {
-  color: #7fffc7;
-  font-weight: bold;
-  min-width: 18px;
-  text-align: center;
-}
-
-/* input */
-#terminal-input {
-  background: transparent;
-  border: 1px dashed rgba(255,255,255,0.12);
   color: #fff;
-  padding: 0.5rem 0.6rem;
-  border-radius: 6px;
+}
+
+#terminal-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
   outline: none;
-  flex: 1 1 auto;
-  caret-color: #7fffc7;
+  caret-color: #33ff33;
 }
 
-/* small control buttons */
-.terminal-controls {
-  display: flex;
-  gap: 0.5rem;
-  justify-content: flex-end;
+#terminal-input::placeholder {
+  color: #666;
+  font-style: italic;
 }
 
-.terminal-controls button {
-  background: rgba(255,255,255,0.05);
-  color: #e8ffe9;
-  border: 1px solid rgba(255,255,255,0.06);
-  padding: 0.35rem 0.6rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 0.9rem;
-}
-.terminal-controls button:hover {
-  background: rgba(255,255,255,0.08);
-}
-
-/* typing caret in reply when animating */
+/* typing caret for replies */
 .typing-caret {
   display: inline-block;
   width: 8px;
-  height: 1.05em;
-  background: #b6f5d1;
-  margin-left: 6px;
-  animation: blink 1s steps(1) infinite;
+  height: 1em;
+  background: #33ff33;
+  animation: blink 0.8s steps(1) infinite;
   vertical-align: bottom;
 }
-@keyframes blink { 50% { background: transparent } }
 
-
-
-
-
-
-
-
-
-
-
-
-/* =================================== */
-/* ========== NOTICING PAGE ========== */
-/* =================================== */
-#noticing {
-  text-align: center;
-  padding: 4rem 1.5rem;
+@keyframes blink {
+  50% { opacity: 0; }
 }
 
-#noticing h2 {
-  font-size: 2.2rem;
-  margin-bottom: 1.25rem;
-}
+.line.user { color: #33ff33; }
+.line.reply { color: #aaa; font-style: italic; }
 
-.intro {
-  color: #666;
-  max-width: 600px;
-  margin: 0 auto 2.5rem;
-  font-size: 1.1rem;
-}
-
-.photo-frame {
-  max-width: 650px;
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: 16px;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.12);
-}
-
-.photo-frame img {
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: transform 0.4s ease;
-}
-
-.photo-frame img:hover {
-  transform: scale(1.02);
-}
-
-#notice-caption {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-size: 1.15rem;
-   top: -10px;  
-  color: #444;
-  margin-top: 1rem;
-  text-align: center;  
-  transition: opacity 0.4s ease;
-  background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(5px);
-  border-radius: 8px;
-  display: inline-block;      /* keeps it nicely sized around the text */
-}
-/* ========== PHOTO FRAME ========== */
-.photo-frame {
-  max-width: 750px; /* bigger than the original 650px */
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: 16px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
-  background: rgba(255, 255, 255, 0.3); /* added slight transparency */
-  backdrop-filter: blur(5px); /* makes transparency look nice */
-  padding: 0.5rem; /* gives the image a little breathing room */
-}
-
-.photo-frame img {
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: transform 0.4s ease, opacity 0.4s ease;
-}
-
-.photo-frame img:hover {
-  transform: scale(1.02);
-}
-
-/* ========== BUTTONS ========== */
-.nav-buttons {
-  margin-top: 2rem;
+.terminal-controls {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1rem;
 }
 
-.nav-buttons button {
-  background: #f0f0f0;
-  border: none;
-  padding: 0.6rem 1.2rem;
+.terminal-controls button {
+  background: #1a1a1a;
+  color: #fff;
+  border: 1px solid #333;
+  padding: 0.4rem 0.8rem;
   cursor: pointer;
-  border-radius: 6px;
-  font-size: 0.95rem;
-  transition: background 0.25s ease, transform 0.2s ease;
+  border-radius: 4px;
+  font-family: inherit;
+  transition: background 0.2s;
 }
 
-.nav-buttons button:hover {
-  background: #e4e4e4;
-  transform: translateY(-2px);
-  
+.terminal-controls button:hover {
+  background: #333;
 }
-
