@@ -31,10 +31,7 @@
  <!-- ✨ Terminal Section (Letters to the Void) -->
 <section id="terminal">
   <h2>Questions to the World</h2>
-  <div class="terminal-window" role="region" aria-label="Letters to the void">
-    <div class="output" id="terminal-output" aria-live="polite"></div>
-
-    <div class="prompt-line">
+   <div class="prompt-line">
       <span class="prompt-symbol">$</span>
       <input
         id="terminal-input"
@@ -42,7 +39,10 @@
         placeholder="Type your question or /help for commands..."
         autocomplete="off"
       />
+      <div class="terminal-window" role="region" aria-label="Letters to the void">
+      <div class="output" id="terminal-output" aria-live="polite"></div>
     </div>
+
   </div>
 </section>
 
