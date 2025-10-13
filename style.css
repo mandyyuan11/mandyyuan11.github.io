@@ -16,6 +16,9 @@ body {
   color: #2b2b2b;
   padding-top: 80px; /* makes space for fixed header */
 }
+main, body {
+  text-align: center;
+}
 
 /* ========== HEADER ========== */
 header {
@@ -100,9 +103,9 @@ h2::after {
 
 
 
-
+/*=================*/
 /* Terminal / Letters to the Void */
-/* Terminal styling */
+/*=================*/
 .terminal-window {
   background: #000;
   color: #fff;
