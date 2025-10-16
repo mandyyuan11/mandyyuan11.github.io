@@ -10,7 +10,6 @@
 <body>
   <header>
     <nav>
-      <a href ="https://mandyyuan11.github.io/questioning">Questioning</a>
       <a href="https://mandyyuan11.github.io/noticing">Noticing</a>
       <a href="#">Building</a>
       <a href="#">Translating</a>
@@ -23,6 +22,33 @@
   </header>
 
   <main>
+    <section class="intro">
+      <h2>Becoming</h2>
+      <p>I’ve been in love with all things transparent.</p>
+      <p>Light flitting through blinds, settling water, ordinary glass panels.</p>
+    </section>
+
+<!-- ✨ Terminal Section (Letters to the Void) -->
+<section id="terminal">
+  <h2>Ask the void</h2>
+
+  <!-- Terminal window wraps prompt and output -->
+  <div class="terminal-window" role="region" aria-label="Letters to the void">
+    <!-- Prompt at the top -->
+    <div class="prompt-line">
+      <span class="prompt-symbol">$</span>
+      <input
+        id="terminal-input"
+        type="text"
+        placeholder="Type your question or /help for commands..."
+        autocomplete="off"
+      />
+    </div>
+
+    <!-- Terminal output below -->
+    <div class="output" id="terminal-output" aria-live="polite"></div>
+  </div>
+</section>
 </main>
 </body>
 </html>
