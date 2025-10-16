@@ -108,7 +108,7 @@
     });
   } else {
     // initial prompt
-    appendLine("Type something. It doesn't have to be perfect.", 'reply');
+    appendLine("ask the void", 'reply');
   }
 
   // event handlers
