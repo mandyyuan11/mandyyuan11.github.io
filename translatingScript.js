@@ -41,15 +41,6 @@ function updateStreakDisplay() {
 
 updateStreakDisplay();
 
-// Freeze button (-1 day)
-freezeBtn.addEventListener("click", () => {
-  if (streak > 0) {
-    streak--;
-    localStorage.setItem("streak", streak);
-    updateStreakDisplay();
-  }
-});
-
 // Plus button (+1 day)
 plusBtn.addEventListener("click", () => {
   streak++;
