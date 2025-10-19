@@ -5,10 +5,36 @@
 html, body {
   font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
   color: #222;
-  line-height: 1.6;
+  line-height: 1.7;
   margin: 0;
   padding: 0;
   background: #fff;
+  scroll-behavior: smooth;
+}
+
+/* ========== HEADINGS ========== */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
+  color: #111;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+  font-weight: 600;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #111;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
 }
 
 /* =================================== */

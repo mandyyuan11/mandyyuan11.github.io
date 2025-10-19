@@ -1,14 +1,28 @@
-/* ========== GLOBAL ========== */
-body {
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  background: linear-gradient(135deg, #f8f8f8 0%, #eaeaea 100%);
-  color: #222;
-  text-align: center;
+/* =================================== */
+/* ========== RESET & GLOBAL ========= */
+/* =================================== */
+* {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.7;
+  background-color: #f8f9fa;
+  color: #2b2b2b;
+  padding-top: 80px; /* makes space for fixed header */
+  text-align: center;
+}
+
+/* =================================== */
+/* ========== HEADER ========= */
+/* =================================== */
 header {
   background: #1e1e1e;
   color: white;
@@ -39,18 +53,46 @@ nav a:hover {
   opacity: 0.7;
 }
 
-main {
-  padding-top: 100px;
+/* =================================== */
+/* ========== HEADINGS ========= */
+/* =================================== */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
+  color: #111;
 }
 
-/* Subtitle */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #111;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
 .subtitle {
   color: #555;
   font-size: 1rem;
   margin-top: 0.5rem;
 }
 
-/* ========== STREAK COUNTER ========== */
+/* =================================== */
+/* ========== STREAK COUNTER ========= */
+/* =================================== */
 .streak-container {
   display: flex;
   gap: 0.75rem;
@@ -63,35 +105,37 @@ main {
   font-size: 1.4rem;
   font-weight: 600;
   background: linear-gradient(90deg, #93aeff, #c471ff);
-  background-clip: text;             
-  -webkit-background-clip: text;      
-  color: transparent;                 
-  -webkit-text-fill-color: transparent; 
-  background-size: 200% auto;         
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
   transition: transform 0.3s ease;
 }
-
 
 #streak-count.bump {
   transform: scale(1.15);
 }
 
 .streak-container button {
-  background: #222;
+  background: #1e1e1e;
   color: white;
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  font-family: 'Inter', sans-serif;
   transition: background 0.2s, transform 0.2s;
 }
 
 .streak-container button:hover {
-  background: #444;
+  background: #333;
   transform: translateY(-2px);
 }
 
-/* ========== TABS ========== */
+/* =================================== */
+/* ========== TABS ========= */
+/* =================================== */
 .tabs {
   display: flex;
   justify-content: center;
@@ -149,7 +193,9 @@ main {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ========== TIMELINE ========== */
+/* =================================== */
+/* ========== TIMELINE ========= */
+/* =================================== */
 .timeline {
   margin-top: 2rem;
   text-align: left;
