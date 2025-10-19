@@ -1,159 +1,203 @@
-/* --- Global Styles --- */
-html, body {
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  color: #222;
-  line-height: 1.7;
+/* =================================== */
+/* ========== RESET & GLOBAL ========= */
+/* =================================== */
+* {
   margin: 0;
   padding: 0;
-  background: #f8f9fa;
+  box-sizing: border-box;
+}
+
+html {
   scroll-behavior: smooth;
 }
 
-/* --- Header --- */
-header {
-  background: #fff;
-  border-bottom: 1px solid #ddd;
-  padding: 1rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+body {
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.7;
+  background-color: #f8f9fa;
+  color: #2b2b2b;
+  padding-top: 80px; /* makes space for fixed header */
+  text-align: center;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 1.5rem;
-  font-weight: 600;
+/* =================================== */
+/* ========== HEADER ========= */
+/* =================================== */
+header {
+  background: #2a2a2a;
+  color: white;
+  padding: 1.25rem 0;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
 }
 
 nav {
   display: flex;
-  gap: 1rem;
+  justify-content: center;
+  gap: 2rem;
 }
 
 nav a {
+  color: #e8e8e8;
   text-decoration: none;
-  color: #444;
   font-weight: 500;
-  transition: color 0.2s ease;
+  font-size: 1rem;
+  transition: opacity 0.3s ease;
 }
 
 nav a:hover {
-  color: #007bff;
+  opacity: 0.7;
 }
 
-/* --- Tabs --- */
-.tab-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-  gap: 0.5rem;
+/* =================================== */
+/* ========== HEADINGS ========= */
+/* =================================== */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
+  color: #1a1a1a;
 }
 
-.tab-btn {
-  padding: 0.7rem 1.2rem;
-  border: 1px solid #ccc;
-  background: #fff;
-  cursor: pointer;
-  border-radius: 6px;
-  font-size: 0.95rem;
-  transition: background 0.2s ease, color 0.2s ease;
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.tab-btn.active {
-  background: #007bff;
-  color: #fff;
-  border-color: #007bff;
-}
-
-.tab-content {
-  display: none;
-  padding: 2rem;
-  max-width: 800px;
-  margin: 1.5rem auto;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-}
-
-.tab-content.active {
-  display: block;
-}
-
-/* --- Streak Counter --- */
-.streak-display {
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
   text-align: center;
-  font-size: 1.4rem;
-  font-weight: 600;
-  margin-top: 1rem;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #a1a1a1;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* =================================== */
+/* ========== STREAK COUNTER ========= */
+/* =================================== */
+.streak-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  background: #ffffff;
+  border: 1px solid #e3e3e3;
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 #streak-count {
-  display: inline-block;
-  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, #444, #6d879a);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  transition: transform 0.25s ease;
 }
 
-.streak-pulse {
-  animation: pulse 0.4s ease;
+#streak-count.streak-pulse {
+  transform: scale(1.15);
 }
 
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.15); }
-  100% { transform: scale(1); }
-}
-
-/* --- Buttons --- */
-.button-group {
+.streak-buttons {
   display: flex;
-  justify-content: center;
-  gap: 0.8rem;
+  gap: 0.4rem;
 }
 
-button {
-  padding: 0.6rem 1rem;
+.streak-buttons button {
+  background: #2a2a2a;
+  color: white;
+  padding: 0.35rem 0.75rem;
   border: none;
-  border-radius: 6px;
+  border-radius: 50%;
   cursor: pointer;
-  font-size: 0.95rem;
-  background: #007bff;
-  color: #fff;
-  transition: background 0.2s ease, transform 0.1s ease;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1;
+  transition: background 0.2s, transform 0.2s;
 }
 
-button:hover {
-  background: #0056b3;
+.streak-buttons button:hover {
+  background: #3a3a3a;
+  transform: translateY(-1px);
 }
 
-button:active {
-  transform: scale(0.95);
+.streak-buttons button:active {
+  transform: translateY(0);
 }
 
-button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
+/* =================================== */
+/* ========== TIMELINE ========= */
+/* =================================== */
+.timeline {
+  margin-top: 2rem;
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fafafa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #6d879a;
 }
 
-/* --- Responsive --- */
-@media (max-width: 600px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.timeline-item {
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  position: relative;
+}
 
-  nav {
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
+.timeline-item::before {
+  content: "•";
+  position: absolute;
+  left: -0.8rem;
+  top: 0;
+  font-size: 1.5rem;
+  color: #b2b8c2;
+}
 
-  .tab-container {
-    flex-wrap: wrap;
-  }
+.timeline-item h4 {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2b2b2b;
+}
 
-  .tab-btn {
-    flex: 1 1 45%;
-    text-align: center;
-  }
+.timeline-item p {
+  margin: 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* Smooth fade-in for everything */
+* {
+  transition: all 0.2s ease;
 }

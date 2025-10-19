@@ -1,118 +1,84 @@
-/* =================================== */
-/* ========== RESET & GLOBAL ========= */
-/* =================================== */
-* {
+/* ========== Global Styles ========== */
+html, body {
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  color: #222;
+  line-height: 1.7;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-html {
+  background: #f8f9fa;
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  line-height: 1.7;
-  background-color: #f8f9fa;
-  color: #2b2b2b;
-  padding-top: 80px; /* keep space for fixed header */
-  text-align: center;
-  min-height: 100vh;
-}
-
-/* =================================== */
-/* ========== HEADER ========= */
-/* =================================== */
+/* ========== Header & Nav ========== */
 header {
-  background: #2a2a2a;
-  color: white;
-  padding: 1.25rem 0;
-  text-align: center;
-  position: fixed;
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0.75rem 2rem;
+  position: sticky;
   top: 0;
-  width: 100%;
-  z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  z-index: 100;
 }
 
-/* Target header nav specifically so other navs (if any) are unaffected */
-header nav {
+nav {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 
-header nav a {
-  color: #e8e8e8;
+nav a {
   text-decoration: none;
+  color: #444;
   font-weight: 500;
-  font-size: 1rem;
-  transition: opacity 0.2s ease;
+  transition: color 0.3s ease;
 }
 
-header nav a:hover {
-  opacity: 0.8;
+nav a:hover {
+  color: #000;
 }
 
-/* =================================== */
-/* ========== NOTICING SECTION ========= */
-/* =================================== */
-#noticing {
-  text-align: center;
-  padding: 4rem 1.5rem;
-  max-width: 900px;
+nav a.active {
+  color: #000;
+  font-weight: 600;
+  border-bottom: 2px solid #000;
+  padding-bottom: 4px;
+}
+
+/* ========== Main Section ========== */
+main {
+  padding: 4rem 1rem;
+  max-width: 800px;
   margin: 0 auto;
-  /* ensure the section is at least viewport minus header, but allow it to grow */
-  min-height: calc(100vh - 80px);
 }
 
-#noticing h2 {
+h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.2rem;
-  margin-bottom: 1.25rem;
-  position: relative;
-}
-
-#noticing h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: #a1a1a1;
-  margin: 0.5rem auto 0;
-  border-radius: 2px;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .intro {
-  color: #666;
-  max-width: 600px;
-  margin: 0 auto 2.5rem;
-  font-size: 1.05rem;
-  line-height: 1.5;
+  font-size: 1.1rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 2.5rem;
 }
 
-/* =================================== */
-/* ========== PHOTO FRAME ========= */
-/* =================================== */
+/* ========== Photo Frame ========== */
 .photo-frame {
-  width: 80%;
-  max-width: 750px;
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: 16px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.10);
-  background: rgba(255, 255, 255, 0.45);
-  backdrop-filter: blur(4px);
-  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
 }
 
 .photo-frame img {
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: transform 0.45s ease, opacity 0.45s ease;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
 }
 
 .photo-frame img:hover {
@@ -120,43 +86,55 @@ header nav a:hover {
 }
 
 #notice-caption {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-size: 1.12rem;
-  color: #444;
-  margin-top: 1rem;
+  font-size: 1rem;
+  color: #666;
   text-align: center;
-  transition: opacity 0.35s ease;
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(3px);
-  border-radius: 8px;
-  display: inline-block;
-  padding: 0.35rem 0.6rem;
+  max-width: 600px;
 }
 
-/* =================================== */
-/* ========== BUTTONS ========= */
-/* =================================== */
+/* ========== Nav Buttons ========== */
 .nav-buttons {
-  margin-top: 1.75rem;
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
 
 .nav-buttons button {
-  background: #fafafa;
-  border: 1px solid rgba(0,0,0,0.06);
   padding: 0.6rem 1.2rem;
+  background: #222;
+  color: white;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
-  border-radius: 8px;
   font-size: 0.95rem;
-  color: #222;
-  transition: background 0.18s ease, transform 0.14s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .nav-buttons button:hover {
-  background: #f0f0f0;
+  background: #444;
   transform: translateY(-2px);
 }
 
+.nav-buttons button:active {
+  transform: translateY(0);
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 600px) {
+  nav {
+    gap: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .intro {
+    font-size: 1rem;
+  }
+
+  .nav-buttons button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
