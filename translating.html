@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Language Journey</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>My Language Journey</h1>
+    <p class="subtitle">French · Spanish · Mandarin</p>
+  </header>
+
+  <!-- Streak Counter -->
+  <section class="streak">
+    <span id="streak-count">Streak: 1114 days</span>
+    <button id="freeze-btn">Use Streak Freeze</button>
+  </section>
+
+  <!-- Tabs for Languages -->
+  <nav class="tabs">
+    <button class="tab-btn active" data-tab="french">French</button>
+    <button class="tab-btn" data-tab="spanish">Spanish</button>
+    <button class="tab-btn" data-tab="mandarin">Mandarin</button>
+  </nav>
+
+  <!-- Language Content -->
+  <main>
+    <section id="french" class="tab-content active">
+      <h2>French</h2>
+      <p class="reason">Why: I love the sound and culture.</p>
+      <p class="focus">Current focus: pronunciation & daily phrases.</p>
+      <div class="timeline">
+        <p><strong>10/12/2025:</strong> Learned basic greetings.</p>
+      </div>
+    </section>
+
+    <section id="spanish" class="tab-content">
+      <h2>Spanish</h2>
+      <p class="reason">Why: It's widely spoken and useful.</p>
+      <p class="focus">Current focus: verb conjugations.</p>
+      <div class="timeline">
+        <p><strong>10/12/2025:</strong> Practiced present tense.</p>
+      </div>
+    </section>
+
+    <section id="mandarin" class="tab-content">
+      <h2>Mandarin</h2>
+      <p class="reason">Why: It’s part of my heritage.</p>
+      <p class="focus">Current focus: tones & basic grammar.</p>
+      <div class="timeline">
+        <p><strong>10/12/2025:</strong> Reviewed tones and greetings.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
