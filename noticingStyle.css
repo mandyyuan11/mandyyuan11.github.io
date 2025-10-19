@@ -13,9 +13,14 @@ body {
   line-height: 1.7;
   background-color: #f8f9fa;
   color: #2b2b2b;
-  padding-top: 80px; /* makes space for fixed header */
   text-align: center;
 }
+
+main {
+  padding-top: 80px;
+  min-height: 100vh; 
+}
+
 /* =================================== */
 /* ========== NOTICING PAGE ========== */
 /* =================================== */
@@ -37,51 +42,17 @@ body {
   font-size: 1.1rem;
 }
 
-.photo-frame {
-  width: 80%;              /* 👈 Adjust width */
-  max-width: 650px;        /* 👈 Optional: prevent huge images */
-  border-radius: 12px;
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: 16px;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.12);
-}
-
-.photo-frame img {
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: transform 0.5s ease;
-}
-
-.photo-frame img:hover {
-  transform: scale(1.02);
-}
-
-#notice-caption {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-size: 1.15rem;
-   top: -10px;  
-  color: #444;
-  margin-top: 1rem;
-  text-align: center;  
-  transition: opacity 0.5s ease;
-  background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(5px);
-  border-radius: 8px;
-  display: inline-block;      /* keeps it nicely sized around the text */
-}
 /* ========== PHOTO FRAME ========== */
 .photo-frame {
-  max-width: 750px; /* bigger than the original 650px */
+  width: 80%;
+  max-width: 750px;
   margin: 0 auto;
   overflow: hidden;
   border-radius: 16px;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
-  background: rgba(255, 255, 255, 0.3); /* added slight transparency */
-  backdrop-filter: blur(5px); /* makes transparency look nice */
-  padding: 0.5rem; /* gives the image a little breathing room */
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  padding: 0.5rem;
 }
 
 .photo-frame img {
@@ -93,6 +64,21 @@ body {
 
 .photo-frame img:hover {
   transform: scale(1.02);
+}
+
+#notice-caption {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  top: -10px;  
+  color: #444;
+  margin-top: 1rem;
+  text-align: center;  
+  transition: opacity 0.5s ease;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  display: inline-block;
 }
 
 /* ========== BUTTONS ========== */
@@ -116,8 +102,8 @@ body {
 .nav-buttons button:hover {
   background: #e4e4e4;
   transform: translateY(-2px);
-  
 }
+
 /* ========== HEADER ========== */
 header {
   background: #2a2a2a;
@@ -149,15 +135,3 @@ nav a {
 nav a:hover {
   opacity: 0.7;
 }
-
-
-
-
-
-
-
-
-
-
-
-
