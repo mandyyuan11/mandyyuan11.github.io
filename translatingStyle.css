@@ -71,7 +71,11 @@ main {
   font-size: 1rem;
   margin-top: 0.5rem;
 }
-
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
+  color: #111;
+}
 /* ========== STREAK COUNTER ========== */
 .streak-container {
   display: flex;
