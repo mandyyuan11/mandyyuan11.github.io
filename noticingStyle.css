@@ -1,3 +1,6 @@
+/* =================================== */
+/* ========== RESET & GLOBAL ========= */
+/* =================================== */
 * {
   margin: 0;
   padding: 0;
@@ -13,26 +16,71 @@ body {
   line-height: 1.7;
   background-color: #f8f9fa;
   color: #2b2b2b;
+  padding-top: 80px; /* ✅ keeps content below fixed header */
   text-align: center;
-}
-
-main {
-  padding-top: 80px;
-  min-height: 100vh; 
+  min-height: 100vh; /* ✅ ensures scrollable base */
 }
 
 /* =================================== */
-/* ========== NOTICING PAGE ========== */
+/* ========== HEADER ========= */
 /* =================================== */
+header {
+  background: #2a2a2a;
+  color: white;
+  padding: 1.25rem 0;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
 
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: #e8e8e8;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+  opacity: 0.7;
+}
+
+/* =================================== */
+/* ========== NOTICING SECTION ========= */
+/* =================================== */
 #noticing {
   text-align: center;
   padding: 4rem 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: calc(100vh - 80px); /* ✅ ensures enough scrollable content */
 }
 
 #noticing h2 {
+  font-family: 'Playfair Display', serif;
   font-size: 2.2rem;
   margin-bottom: 1.25rem;
+  position: relative;
+}
+
+#noticing h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #a1a1a1;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
 }
 
 .intro {
@@ -42,7 +90,9 @@ main {
   font-size: 1.1rem;
 }
 
-/* ========== PHOTO FRAME ========== */
+/* =================================== */
+/* ========== PHOTO FRAME ========= */
+/* =================================== */
 .photo-frame {
   width: 80%;
   max-width: 750px;
@@ -70,10 +120,9 @@ main {
   font-family: 'Playfair Display', serif;
   font-style: italic;
   font-size: 1.15rem;
-  top: -10px;  
   color: #444;
   margin-top: 1rem;
-  text-align: center;  
+  text-align: center;
   transition: opacity 0.5s ease;
   background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(5px);
@@ -81,7 +130,9 @@ main {
   display: inline-block;
 }
 
-/* ========== BUTTONS ========== */
+/* =================================== */
+/* ========== BUTTONS ========= */
+/* =================================== */
 .nav-buttons {
   margin-top: 2rem;
   display: flex;
@@ -104,34 +155,9 @@ main {
   transform: translateY(-2px);
 }
 
-/* ========== HEADER ========== */
-header {
-  background: #2a2a2a;
-  color: white;
-  padding: 1.25rem 0;
-  text-align: center;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 10;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1rem;
-  transition: opacity 0.3s ease;
-}
-
-nav a:hover {
-  opacity: 0.7;
+/* =================================== */
+/* ========== FADE IN ========= */
+/* =================================== */
+* {
+  transition: all 0.2s ease;
 }
