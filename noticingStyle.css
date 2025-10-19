@@ -12,6 +12,10 @@ html, body {
   scroll-behavior: smooth;
 }
 
+main, body {
+  text-align: center;
+}
+
 /* ========== HEADINGS ========== */
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
@@ -131,6 +135,7 @@ header {
   width: 100%;
   z-index: 10;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; /* ✅ force Inter font */
 }
 
 nav {
@@ -145,6 +150,7 @@ nav a {
   font-weight: 500;
   font-size: 1rem;
   transition: opacity 0.3s ease;
+  font-family: inherit; /* ✅ inherit from header (Inter) */
 }
 
 nav a:hover {

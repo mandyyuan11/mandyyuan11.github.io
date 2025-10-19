@@ -14,7 +14,7 @@ html {
 body {
   font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.7;
-  background-color: #f8f9fa;
+  background-color: #f5f5f5;
   color: #2b2b2b;
   padding-top: 80px; /* makes space for fixed header */
   text-align: center;
@@ -24,7 +24,7 @@ body {
 /* ========== HEADER ========= */
 /* =================================== */
 header {
-  background: #1e1e1e;
+  background: #2a2a2a;
   color: white;
   padding: 1.25rem 0;
   text-align: center;
@@ -33,6 +33,7 @@ header {
   width: 100%;
   z-index: 10;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
 }
 
 nav {
@@ -42,7 +43,7 @@ nav {
 }
 
 nav a {
-  color: white;
+  color: #e8e8e8;
   text-decoration: none;
   font-weight: 500;
   font-size: 1rem;
@@ -59,7 +60,7 @@ nav a:hover {
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
   letter-spacing: 0.5px;
-  color: #111;
+  color: #1a1a1a;
 }
 
 h1 {
@@ -79,13 +80,13 @@ h2::after {
   display: block;
   width: 60px;
   height: 3px;
-  background: #111;
+  background: #a1a1a1;
   margin: 0.5rem auto 0;
   border-radius: 2px;
 }
 
 .subtitle {
-  color: #555;
+  color: #666;
   font-size: 1rem;
   margin-top: 0.5rem;
 }
@@ -104,7 +105,7 @@ h2::after {
 #streak-count {
   font-size: 1.4rem;
   font-weight: 600;
-  background: linear-gradient(90deg, #93aeff, #c471ff);
+  background: linear-gradient(90deg, #b2b8c2, #c7b8a8);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -118,7 +119,7 @@ h2::after {
 }
 
 .streak-container button {
-  background: #1e1e1e;
+  background: #2a2a2a;
   color: white;
   padding: 0.5rem 1rem;
   border: none;
@@ -129,7 +130,7 @@ h2::after {
 }
 
 .streak-container button:hover {
-  background: #333;
+  background: #3a3a3a;
   transform: translateY(-2px);
 }
 
@@ -149,14 +150,15 @@ h2::after {
   font-size: 1rem;
   padding: 0.5rem 1.5rem;
   cursor: pointer;
-  color: #444;
+  color: #555;
   position: relative;
   transition: 0.25s ease;
+  font-family: 'Inter', sans-serif;
 }
 
 .tab-btn.active {
   font-weight: 600;
-  color: #000;
+  color: #2a2a2a;
 }
 
 .tab-btn.active::after {
@@ -167,12 +169,12 @@ h2::after {
   transform: translateX(-50%);
   width: 50%;
   height: 3px;
-  background: linear-gradient(90deg, #93aeff, #c471ff);
+  background: linear-gradient(90deg, #b2b8c2, #c7b8a8);
   border-radius: 2px;
 }
 
 .tab-btn:hover {
-  color: #000;
+  color: #2a2a2a;
   transform: translateY(-2px);
 }
 
@@ -202,11 +204,11 @@ h2::after {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  background: white;
+  background: #fafafa;
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-  border-left: 4px solid #c471ff;
+  border-left: 4px solid #c7b8a8;
 }
 
 .timeline-item {
@@ -221,13 +223,14 @@ h2::after {
   left: -0.8rem;
   top: 0;
   font-size: 1.5rem;
-  color: #93aeff;
+  color: #b2b8c2;
 }
 
 .timeline-item h4 {
   margin: 0 0 0.25rem;
   font-size: 1rem;
   font-weight: 600;
+  color: #2b2b2b;
 }
 
 .timeline-item p {
